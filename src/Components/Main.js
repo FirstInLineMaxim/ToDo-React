@@ -1,7 +1,6 @@
 import React from 'react'
 import './main.css';
 
-
 export default function main() {
   return (
     <div>
@@ -10,7 +9,9 @@ export default function main() {
           <div class="col-8">
             {/* TODOS LIST */}
             {/* TITLE */}
-            <h1>JUST DO IT</h1>
+            <div id="title" class="text-center">
+              <div class="text"><h1>JUST DO IT</h1></div></div>
+            
             {/* INPUT */}
             <div></div>
             {/* UL-TASKS */}
