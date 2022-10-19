@@ -1,4 +1,4 @@
-.container{
+.container {
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
     background-color: brown;
@@ -10,10 +10,11 @@
     justify-content: center;
     font-size: 6rem;
     color: #ffdfdb;
-  }
+}
 
-  .col-8{
+.col-8 {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    flex-direction: column;
+}
