@@ -1,5 +1,6 @@
 import React from 'react'
 import './main.css';
+import {SearchBar} from "./SearchBar";
 
 export default function main() {
   return (
@@ -11,13 +12,18 @@ export default function main() {
             {/* TITLE */}
             <div id="title" class="text-center">
               <div class="text"><h1>JUST DO IT</h1></div></div>
-            
+              
+              
+              
+
             {/* INPUT */}
             <div></div>
             {/* UL-TASKS */}
             <div></div>
             {/* PROGRESSBAR */}
             <div></div>
+
+          <div><SearchBar/></div>
           </div>
         <div class="col-2"><p>test1</p></div>
       
