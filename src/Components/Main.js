@@ -1,5 +1,7 @@
 import React from 'react'
 import './main.css';
+import Order from "./Order.js"
+
 
 export default function main() {
   return (
@@ -15,7 +17,9 @@ export default function main() {
             {/* INPUT */}
             <div></div>
             {/* UL-TASKS */}
-            <div></div>
+            <div>
+              <Order />
+            </div>
             {/* PROGRESSBAR */}
             <div></div>
           </div>
