@@ -1,8 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import Order from './Order';
+
 
 function App() {
-  return (
+   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -17,6 +19,7 @@ function App() {
         >
           Learn React
         </a>
+<Order /> 
       </header>
     </div>
   );
