@@ -3,7 +3,7 @@ import './App.css';
 import Main from './Components/Main';
 
 function App() {
-  return (
+   return (
     <div className="App">
 
       {/* Import Components into Main.js */}
