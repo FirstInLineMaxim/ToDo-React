@@ -26,7 +26,3 @@ export default function main() {
     </div>
   )
 }
-
-
-//Commit MSG is this thing working or not 
-()maybe i need a code 
