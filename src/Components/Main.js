@@ -3,6 +3,9 @@ import './main.css';
 import {SearchBar} from "./SearchBar";
 
 export default function main() {
+  const names = ["wassup","not Much","how u doing"]
+  const what = names.map(e => <li>{e}</li>)
+
   return (
     <div>
       <div class="container">
@@ -11,7 +14,14 @@ export default function main() {
             {/* TODOS LIST */}
             {/* TITLE */}
             <div id="title" class="text-center">
-              <div class="text"><h1>JUST DO IT</h1></div></div>
+              <div class="text">
+                <h1>JUST DO IT</h1>
+                 <ol>
+                  {what}
+                 </ol>
+
+              </div>
+            </div>
               
               
               
