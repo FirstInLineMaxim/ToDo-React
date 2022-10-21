@@ -18,7 +18,7 @@ padding: 20px 200px;
 #todolist {
 display: flex;
 flex-direction: column;
-justify-content: start;
+
 align-items: center;
 justify-self: center;
 align-self: end;

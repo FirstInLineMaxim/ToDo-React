@@ -1,4 +1,4 @@
-import React, {createElement, useState} from "react";
+import React, {useState, useEffect} from "react";
 import './order.css';
 
 
@@ -7,32 +7,47 @@ import './order.css';
 
 
 export default function Order() { 
- let l = localStorage.getItem("todo")
- console.log(l)
+
  
-  if ( 0 ===1) {
-  for (let i = 0 ; i<l.length;i++) {
-
-
-  }}
-  const [inputo, setinputo] = useState("")
-let d = document.querySelector("#inputlist")
-let ul = document.querySelector("#ul")
-
+  
+ let ul = document.querySelector("#ul")
+ const [inputo, setinputo] = useState("")
   function olli() {
-setinputo(d.value)
-console.log(inputo)
-  }
+   let newinput = document.querySelector("#inputlist")
+    setinputo(newinput.value)
+          }
+ 
+          useEffect(() => {
+          function appstore() {
+            let l = []
+            let k = JSON.parse(localStorage.getItem("todo")) || []
+            console.log(k)
+            let ul = document.querySelector("#ul")
+            let k = JSON.parse(localStorage.getItem("todo"))
+            for (let i = 0; i<k.length;i++) {
+            let list = document.createElement("li")
+            list.innerHTML = k[i]
+            ul.appendChild(list)
+            }}
+   
+ 
+ }, 500)
 
+
+  
   function handleClick(e) {
     
 let li = document.createElement("li")
-li.innerText = inputo
+li.innerHTML = inputo
 ul.appendChild(li)
-let k = JSON.stringify(inputo)
-localStorage.setItem("todo" , k)
+console.log(inputo)
+console.log("this" + l)
+l.push(...k)
+l.push(inputo) 
+l = JSON.stringify(l)
+localStorage.setItem("todo" ,l )
 setinputo("")
-d.value = ""
+
 
   }
 
