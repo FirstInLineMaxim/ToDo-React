@@ -7,7 +7,7 @@ export default function main() {
     <div>
       <div class="container">
         <div class="col-2"><p>test1</p></div>
-          <div class="col-8">
+          <div id="todocol" class="col-8">
             {/* TODOS LIST */}
             {/* TITLE */}
             <h1>JUST DO IT</h1>
