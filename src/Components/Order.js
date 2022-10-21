@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState } from "react";
 import './order.css';
 
 
@@ -23,7 +23,7 @@ export default function Order() {
             let k = JSON.parse(localStorage.getItem("todo")) || []
             console.log(k)
             let ul = document.querySelector("#ul")
-            let k = JSON.parse(localStorage.getItem("todo"))
+           
             for (let i = 0; i<k.length;i++) {
             let list = document.createElement("li")
             list.innerHTML = k[i]
@@ -48,17 +48,60 @@ l = JSON.stringify(l)
 localStorage.setItem("todo" ,l )
 setinputo("")
 
+export default function Order() {
 
+  const [inputo, setinputo] = useState(" ")
+  const d = document.querySelector("#inputlist")
+  const ul = document.querySelector("#ul")
+
+  function olli() {
+    const inputValue =document.querySelector("#inputlist").value
+    console.log(inputValue)
+    const input = inputValue
+    setinputo(input)
+  }
+  function handleClick(e) {
+    if(inputo === ""){
+      alert("You need a Task")
+    }else{
+      const li = document.createElement("li")
+      const task = document.createElement("input")
+      const checkbox = document.createElement('input')
+      const edit = document.createElement("button")
+      const del = document.createElement("button")
+      const div = document.createElement("div") 
+
+      
+      checkbox.setAttribute('type', 'checkbox')
+      task.value = inputo
+      task.disabled = true
+      task.className = "textarea"
+      ul.className = "list-unstyled"
+
+      // creates the edit button 
+      edit.className = "edit"
+      del.className = "del"
+      div.className = "buttons"
+      
+      ul.appendChild(li).appendChild(checkbox)
+      li.appendChild(task)
+      li.appendChild(edit)
+      li.appendChild(del)
+
+      setinputo("")
+      d.value = ""
+      setinputo("")
+    }
   }
 
   return <div id="todolist">
-  <input onChange={olli} id="inputlist" placeholder="todo" /><button onClick={handleClick} type="submit" >Click me</button>
-<ul id="ul"> 
-    <li>testliste1</li>
-    <li>testliste2</li>
-    <li>testliste3</li>
-    <li>testliste4</li>
-  
-  </ul>
+    <div className="taskBar">
+      <input onChange={olli} id="inputlist" placeholder="todo" />
+      <button 
+      onClick={handleClick} 
+      type="submit" >Click me</button>
+    </div>
+    <ul id="ul">
+    </ul>
   </div>
-  }
+}}}

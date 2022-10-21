@@ -6,13 +6,16 @@ import Order from "./Order.js"
 export default function main() {
   return (
     <div>
-      <div class="container">
-        <div class="col-2"><p>test1</p></div>
-          <div id="todocol" class="col-8">
+      <div className="container">
+        <div className="col-2"><p>test1</p></div>
+          <div id="todocol" className="col-8">
             {/* TODOS LIST */}
             {/* TITLE */}
-            <div id="title" class="text-center">
-              <div class="text"><h1>JUST DO IT</h1></div></div>
+            <div id="title" className="text-center">
+              <div className="text">
+                <h1>JUST DO IT</h1>
+              </div>
+            </div>
             
             {/* INPUT */}
             <div></div>
@@ -23,7 +26,7 @@ export default function main() {
             {/* PROGRESSBAR */}
             <div></div>
           </div>
-        <div class="col-2"><p>test1</p></div>
+        <div className="col-2"><p>test1</p></div>
       
       
       </div>
