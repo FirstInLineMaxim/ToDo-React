@@ -7,6 +7,14 @@ import './order.css';
 
 
 export default function Order() { 
+ let l = localStorage.getItem("todo")
+ console.log(l)
+ 
+  if ( 0 ===1) {
+  for (let i = 0 ; i<l.length;i++) {
+
+
+  }}
   const [inputo, setinputo] = useState("")
 let d = document.querySelector("#inputlist")
 let ul = document.querySelector("#ul")
@@ -21,8 +29,11 @@ console.log(inputo)
 let li = document.createElement("li")
 li.innerText = inputo
 ul.appendChild(li)
+let k = JSON.stringify(inputo)
+localStorage.setItem("todo" , k)
 setinputo("")
 d.value = ""
+
   }
 
   return <div id="todolist">
