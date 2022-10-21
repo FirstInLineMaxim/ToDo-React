@@ -16,24 +16,42 @@ export default function Order() {
 
     }
   }
-  const [inputo, setinputo] = useState("")
+  const [inputo, setinputo] = useState(" ")
   let d = document.querySelector("#inputlist")
   let ul = document.querySelector("#ul")
 
   function olli() {
-    console.log(d.value)
+    setinputo(d.value)
     console.log(inputo)
   }
-
+const storedTasks = []
   function handleClick(e) {
-    if(d.value === ""){
+    if(inputo === ""){
       alert("You need a Task")
     }else{
       let li = document.createElement("li")
-      li.innerText = inputo
-      ul.appendChild(li)
-      let k = JSON.stringify(inputo)
-      localStorage.setItem("todo", k)
+      const task = document.createElement("input")
+      const checkbox = document.createElement('input')
+      const edit = document.createElement("button")
+      const del = document.createElement("button")
+      const div = document.createElement("div") 
+
+      
+      checkbox.setAttribute('type', 'checkbox')
+      task.value = inputo
+      task.disabled = true
+      task.className = "textarea"
+
+      // creates the edit button 
+      edit.className = "edit"
+      del.className = "del"
+      div.className = "buttons"
+      
+      ul.appendChild(li).appendChild(checkbox)
+      li.appendChild(task)
+      li.appendChild(edit)
+      li.appendChild(del)
+
       setinputo("")
       d.value = ""
       setinputo("")
@@ -41,7 +59,10 @@ export default function Order() {
   }
 
   return <div id="todolist">
-    <input onChange={olli} id="inputlist" placeholder="todo" /><button onClick={handleClick} type="submit" >Click me</button>
+    <div className="taskBar">
+      <input onChange={olli} id="inputlist" placeholder="todo" />
+      <button onClick={handleClick} type="submit" >Click me</button>
+    </div>
     <ul id="ul">
       <li>testliste1</li>
       <li>testliste2</li>

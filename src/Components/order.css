@@ -1,3 +1,12 @@
+* tiny reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+
 ul {
     display:flex;
 border: 2px solid black;
@@ -12,8 +21,10 @@ li {
 font-size: 1rem;
 margin: 5%;
 padding: 20px 200px;
-
+display:flex;
+gap: 1rem;
 }
+
 
 #todolist {
 display: flex;
@@ -34,4 +45,93 @@ align-self: end;
 background-color: aliceblue;
 
 
+}
+
+/* BUTTONS */
+
+.edit {
+    background-image: url(/src/Buttonsalt/pencil.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 2rem;
+    color: transparent;
+    border: none;
+    background-color: transparent;
+    width: auto;
+    filter: invert(100%);
+}
+.del {
+    background-image: url(/src/Buttonsalt/trash.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 2rem;
+    color: transparent;
+    border: none;
+    background-color: transparent;
+    width: auto;
+    filter: invert(100%);
+}
+
+.save {
+    background-image: url(/src/Buttonsalt/save.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 2rem;
+    color: transparent;
+    border: none;
+    background-color: transparent;
+    width: auto;
+    filter: invert(100%);
+}
+
+/* CHECKBOX */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    background-color: transparent;
+    width: 0.85em;
+    height: 0.85em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    display: grid;
+    place-content: center;
+  }
+
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+  }
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+    background-color: white;
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+
+  #inputlist{
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    border-color: white;
+    border-width: 0px;
+    width: 100%;
+}
+
+.taskBar {
+    display: flex;
+    width: 100%;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+input:focus::placeholder {
+    color: transparent;
 }
