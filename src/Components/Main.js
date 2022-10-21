@@ -12,7 +12,8 @@ export default function main() {
             {/* TODOS LIST */}
             {/* TITLE */}
             <div id="title" class="text-center">
-              <div class="text"><h1>JUST DO IT</h1></div></div>
+              <div class="text"><h1>JUST DO IT</h1></div>
+            </div>
             
             {/* INPUT */}
             <div></div>
